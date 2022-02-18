@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem Dinâmica</h1>
+    <p>Tente abrir esse site em dispositivos diferentes ou simplesmente aumente e diminua o tamanho de seu navegador.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+        <!-- A ordem das tags source importa. As tags contendo as imagens menores ficam sempre acima e vão descendo progressivamente conforme os tamanhos (dimensões, não tamanho em bytes) aumentam. Caso isso não seja respeitado, vai ficar tudo bagunçado e desconfigurado. IMPORTANTE: A tag img fica SEMPRE abaixo de todas as tags source, sendo a última de cima para baixo, pois ela recebe as modificações que estão vindo das linhas de cima. -->
+    </picture>
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5</p>
+    <audio src="midia/whereto.mp3" controls autoplay></audio>
+    <audio preload="metadata">
+        <source src="midia/whereto.mp3" type="audio/mpeg">
+        <source src="midia/whereto.ogg" type="audio/ogg">
+        <source src="midia/whereto.wav" type="audio/wav"><!-- Aqui a ordem das sources TAMBÉM IMPORTA, e exatamente como acontece com imagem, a ordem de prioridade é de cima pra baixo. EVITAR usar audio em arquivo WAV por conta do peso. -->
+    </audio>
+    <!-- Um failsafe no caso do navegadordo cliente não tocar o áudio é incluir uma opção de download direto, como pode ser visto abaixo -->
+    <p>Infelizmente seu navegador consegue reproduzir áudio</p>  
+    <a href="midia/whereto.mp3">Clique aqui para baixar o arquivo MP3</a>
+    
+</body>
+</html>

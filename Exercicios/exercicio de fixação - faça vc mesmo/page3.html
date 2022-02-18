@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 3</title>
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+    <h1>Capítulo 3: Formatações</h1>
+      <p>Em HTML5 temos vários tipos de formatação de texto.</p>
+
+    <h2>Negrito / Destaque</h2>
+      <p>Textos em <strong>negrito</strong> podem ser inseridos utilizando uma das seguintes tags: &lt;b&gt; e &lt;strong&gt;. No entanto, a tag &lt;b&gt; é uma tag não-semântica (dá forma ao invés de contexto), e por conta disso, em HTML5 devemos utilizar a tag &lt;strong&gt; em seu lugar, por se tratar de uma tag semântica. Em HTML5 temos a tag &lt;strong&gt; para dar <strong>destaque</strong> ao texto, substituindo assim o uso da tag &lt;b&gt;.</p>
+
+    <h2>Itálico / Ênfase</h2>
+      <p>Podemos também inserir textos em <em>itálico</em> utilizando duas tags: &lt;i&gt; e &lt;em&gt;. Porém, assim como acontece com textos em negrito, em HTML5 prefere-se o uso da tag &lt;em&gt; para dar <em>destaque</em> ao texto (forma semântica).</p>
+
+    <h2>Texto Marcado</h2>
+      <p>Para inserir um <mark>texto marcado</mark>, como podemos fazer em um caderno ou livro usando um marca-texto, utilizamos a tag &lt;mark&gt;. Por padrão, o texto fica marcado na cor amarela, mas é possível alterar a cor da marcação utilizando <strong>CSS</strong> (usando o seletor &lt;style&gt;, mas isso veremos mais pra frente.</p>
+
+    <h2>Alterar tamanho do texto</h2>
+      <p>É possível utilizar a tag &lt;small&gt; para diminuir o tamanho do texto, embora seja preferível alterar tamanho de texto utilizando CSS. A tag &lt;big&gt; está obsoleta e não deve ser usada, sendo mencionada aqui apenas para servir de lembrete do que <strong>NÂO USAR</strong>.
+      </p>
+
+    <h2>Texto Deletado (strikethrough text)</h2>
+      <p>Quando queremos indicar que um <del>trecho do texto</del> deve ser lido, mas desconsiderado, utilizamos a tag &lt;del&gt;.</p>
+
+    <h2>Texto Inserido</h2>
+       <p>A utilização de <ins>textos inseridos</ins> serve tanto para dar ênfase ao trecho como também para indicar que aquele trecho/texto foi inserido depois. Visualmente, o efeito é o mesmo de um texto sublinhado, porém, a tag que era utilizada para sublinhar textos &lt;u&gt; está obsoleta, e em HTML5, utilizamos em seu lugar a tag semântica &lt;ins&gt;.</p>  
+
+    <h2>Texto sobrescrito e subescrito</h2>
+       <p>Exemplos de texto sobrescrito são representações de potência em cálculos matemáticos, como X elevado à 2. Para inserir este tipo de texto corretamente em HTML5, utilizamos a tag &lt;sup&gt;imediatamente antes do caractere que queremos alterar. O resultado é este aqui: X<sup>2</sup>.</p>  
+       <p>Já os textos subescritos, como por exemplo, a representação da fórmula do oxigênio (O<sub>2</sub>), são inseridos utilizando a tag &lt;sub&gt; imediatamente antes do caractere que será alterado.</p>
+    
+    <h2>Citações Simples</h2>
+       <p>Para inserir citações simples, usamos a tag &lt;q&gt;, que indica <q>quote</q>.</p>
+     
+    <h2>Citações Completas</h2>  
+       <p>Podemos inserir citações completas, de outro lugar (como por exemplo, um trecho de livro em outro site. Para isso, utilizamos a tag &lt;blockquote&gt; com o atributo &lt;cite&gt; (&lt;blockquote cite&gt;) tendo como valor, por exemplo, a URL do livro ou trecho citado. O resultado aparece como o exemplo abaixo:</p>
+       <p>No livro tal, Fulano da Silva disse:</p>
+          <blockquote cite="URL DO TRECHO OU LIVRO CITADO">
+              Vários blá blá blás, isso é só um exemplo, e eu poderia muito bem inserir apenas um &lt;lorem&gt; aqui. Pensando bem, farei isso agora, olha só: Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aspernatur architecto quos, iste iusto pariatur tempora mollitia culpa, nisi quae nulla laboriosam ratione quasi iure consequuntur! Id, velit corporis! Fuga?
+          </blockquote>
+    <h2>Abreviações</h2>
+       <p>Quando usamos abreviações, como por exemplo, HTML, devemos utilizar a tag &lt;abbr title="Escreva aqui o que a abreviação significa"&gt; para ajudar mecânismos de indexação e leitores de tela.</p>
+    <h2>Código Fonte / Pré-Formatação</h2>   
+       <p>Quando queremos inserir um código em linguagem de programação, usamos a tag &lt;code&gt; para facilitar a leitura, convertendo o texto envelpado pela tag em fonte monospace. Porém, para manter a integridade visual (identação) do código, é necessário envelopar a tag &lt;code&gt; com a tag &lt;pre&gt;, que serve para manter a pré-formatação do texto.</p>
+       <p><strong>Exemplo:</strong> O comando <code>document.getElementById</code> é usado em linguagem JavaScript.</p>
+       <pre>
+           <code>
+            num = int(input('Digite um número'))
+            if num % 2 ** 0:
+                print(f'O número {num} é PAR')
+            else:
+                print(f'O número {num} é ÍMPAR')
+            print('fim do programa')</code>
+       </pre>
+       <p>Note que a pré-formatação considera a posição do texto no editor (por isso o código acima aparece mais para o meio da tela). Podemos alterar isso ao "puxar" o código mais para a esquerda no código fonte da página, como podemos ver abaixo (no exemplo a seguir, o texto pré-formatado "toca" a "parede" esquerda da tela do editor, no código fonte da página):</p>
+       <pre>
+        <code>
+num = int(input('Digite um número'))
+if num % 2 ** 0:
+    print(f'O número {num} é PAR')
+else:
+    print(f'O número {num} é ÍMPAR')
+print('fim do programa')</code>
+    </pre>
+        <p>Isto é chamado de Tabulação, e é feito no editor selecionando o texto desejado, e em seguida, segurando a tecla SHIFT e apertando a tecla TAB.</p>
+       
+    <br>
+    <a href="index.html">Retornar ao índice</a>
+</body>
+</html>

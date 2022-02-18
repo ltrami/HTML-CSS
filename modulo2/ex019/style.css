@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+/*
+
+Elementos HTML contendo uma id "recebem alvo/respondem" à seletores CSS que iniciam com # (IDs SÃO ÚNICOS, NÃO PODEM SER USADOS MAIS DE UMA VEZ EM UM MESMO DOCUMENTO HTML)
+
+Já elementos HTML contendo uma class "recebem alvo/respondem" à seletores CSS que iniciam com . (CLASSSES AFETAM TODO UM GRUPO DE ELEMENTOS MARCADOS COM A MESMA CLASSE, E MÚLTIPLOS ELEMENTOS PODEM TER A MESMA CLASSE)
+
+*/
+
+body {
+    background-color: rgb(205, 255, 203);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h1 {
+    color: rgb(4, 109, 0);
+}
+
+#principal {
+    text-align: center;
+    color: white;
+    background-color: rgb(4, 109, 0);
+}
+
+h2 {
+  color: rgb(73, 109, 71);
+}
+
+.basico {
+   color: green;
+}
+
+.intermediario {
+   color: yellowgreen;
+}
+
+.avancado {
+    color: maroon;
+}
+
+.destaque {
+    background-color: rgba(240, 250, 96, 0.856);
+}
+
+/*
+
+A hierarquia do seletores segue de cima pra baixo (com o último, mais abaixo, tendo maior prioridade), sendo que é mais correto usar CLASS seguido de ID. Esses vem depois de todos os outros, herdando caractcarísticas não-iguais e sobrepondo características iguai previamente estabelecidas por outros seletores
+
+*/
