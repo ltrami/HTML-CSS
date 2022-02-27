@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+
+:root {
+    --mainfont: 'Zen Kaku Gothic New', sans-serif;
+    --secfont: 'Caveat', sans-serif;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -8,28 +18,38 @@
 html, body {
     min-height: 100vh;
     background-color: darkgrey;
+    font-family: var(--mainfont);
 }
 
 header {
     background-color: black;
     color: white;
     text-align: center;
+    font-family: var(--mainfont);
+    
 }
 
 
 header h1 {
     padding-top: 50px;
     font-variant: small-caps;
+    font-family: var(--mainfont);
+    font-weight: 300;
+    font-size: 2.2em;
 }
 
 header p {
     padding-bottom: 50px;
+    font-family: var(--mainfont);
+    font-weight: 300;
+
 }
 
 header a, footer a {
     color: white;
     text-decoration: none;
     font-weight: bolder;
+    font-family: var(--mainfont);
 }
 
 header a:hover, footer a:hover {
@@ -41,6 +61,9 @@ section {
     padding-bottom: 10vh;
     line-height: 2em;
     padding-left: 30px;
+    font-family: var(--secfont);
+    font-size: 1.6em;
+
 }
 
 section.normal {
@@ -55,8 +78,10 @@ section.imagem {
 }
 
 section.imagem p {
+    display: inline-block;
+    padding: 1em;
     background-color: rgba(0, 0, 0, 0.178);
-    width: 400px;
+    
 }
 
 footer {
